@@ -1,0 +1,22 @@
+{
+  "featuredContent": {
+    "music": {
+      "title": "Morning Serenity Collection",
+      "description": "A curated playlist of gentle ambient sounds to start your day with peace and intention.",
+      "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4",
+      "url": "https://soundcloud.com/example/morning-serenity"
+    },
+    "meditation": {
+      "title": "10-Minute Mindfulness Reset",
+      "description": "A gentle guided meditation to center yourself and find clarity in the present moment.",
+      "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+      "url": "https://example.com/mindfulness-reset"
+    },
+    "action": {
+      "title": "Local Tree Planting Initiative",
+      "description": "Join your community in creating green spaces that benefit both the environment and collective well-being.",
+      "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b",
+      "url": "https://example.com/tree-planting"
+    }
+  }
+}
