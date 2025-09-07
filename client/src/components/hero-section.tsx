@@ -3,9 +3,11 @@ import { Search, Music, Brain, Heart } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
+  const { t } = useLanguage();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,11 +30,11 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto fade-in">
           <h2 className="text-4xl lg:text-6xl font-light text-foreground mb-6 leading-tight">
-            Find Your Path to 
-            <span className="text-primary font-medium"> Inner Peace</span>
+            {t('heroTitle')} 
+            <span className="text-primary font-medium"> {t('heroTitleHighlight')}</span>
           </h2>
           <p className="text-xl lg:text-2xl text-muted-foreground mb-12 leading-relaxed">
-            Discover curated music, meditation resources, and meaningful actions that nurture tranquility and mindful living.
+            {t('heroSubtitle')}
           </p>
           
           {/* Search Bar */}
@@ -40,7 +42,7 @@ export default function HeroSection() {
             <div className="relative">
               <Input
                 type="text"
-                placeholder="Search for peaceful content..."
+                placeholder={t('searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full px-6 py-4 pr-14 bg-card border border-border rounded-2xl text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent shadow-lg"
@@ -60,15 +62,15 @@ export default function HeroSection() {
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="secondary" className="bg-accent text-accent-foreground px-4 py-2 rounded-full">
               <Music className="w-4 h-4 mr-2" />
-              Ambient Sounds
+              {t('ambientSounds')}
             </Badge>
             <Badge variant="secondary" className="bg-accent text-accent-foreground px-4 py-2 rounded-full">
               <Brain className="w-4 h-4 mr-2" />
-              Guided Meditation
+              {t('guidedMeditation')}
             </Badge>
             <Badge variant="secondary" className="bg-accent text-accent-foreground px-4 py-2 rounded-full">
               <Heart className="w-4 h-4 mr-2" />
-              Mindful Actions
+              {t('mindfulActions')}
             </Badge>
           </div>
         </div>
