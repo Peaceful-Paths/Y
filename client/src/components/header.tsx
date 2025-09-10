@@ -2,12 +2,9 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useLanguage } from "@/contexts/LanguageContext";
-import LanguageSelector from "@/components/LanguageSelector";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -37,35 +34,32 @@ export default function Header() {
                 />
               </svg>
             </div>
-            <h1 className="text-xl font-semibold text-foreground">{t('appName')}</h1>
+            <h1 className="text-xl font-semibold text-foreground">Peaceful Paths</h1>
           </div>
           
-          <div className="flex items-center space-x-4">
-            <nav className="hidden md:flex items-center space-x-8">
-              <button
-                onClick={() => scrollToSection("music")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                data-testid="nav-music"
-              >
-                {t('music')}
-              </button>
-              <button
-                onClick={() => scrollToSection("meditation")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                data-testid="nav-meditation"
-              >
-                {t('meditation')}
-              </button>
-              <button
-                onClick={() => scrollToSection("action")}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                data-testid="nav-action"
-              >
-                {t('action')}
-              </button>
-            </nav>
-            <LanguageSelector />
-          </div>
+          <nav className="hidden md:flex items-center space-x-8">
+            <button
+              onClick={() => scrollToSection("music")}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+              data-testid="nav-music"
+            >
+              Music
+            </button>
+            <button
+              onClick={() => scrollToSection("meditation")}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+              data-testid="nav-meditation"
+            >
+              Meditation
+            </button>
+            <button
+              onClick={() => scrollToSection("action")}
+              className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+              data-testid="nav-action"
+            >
+              Action
+            </button>
+          </nav>
           
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -85,21 +79,21 @@ export default function Header() {
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-left"
                   data-testid="mobile-nav-music"
                 >
-                  {t('music')}
+                  Music
                 </button>
                 <button
                   onClick={() => scrollToSection("meditation")}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-left"
                   data-testid="mobile-nav-meditation"
                 >
-                  {t('meditation')}
+                  Meditation
                 </button>
                 <button
                   onClick={() => scrollToSection("action")}
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-left"
                   data-testid="mobile-nav-action"
                 >
-                  {t('action')}
+                  Action
                 </button>
               </nav>
             </SheetContent>

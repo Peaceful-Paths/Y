@@ -4,11 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Skeleton } from "@/components/ui/skeleton";
-import { useLanguage } from "@/contexts/LanguageContext";
 import type { MusicCollection, MeditationPractice, PeacefulAction } from "@shared/schema";
 
 export default function FeaturedContent() {
-  const { t } = useLanguage();
   const { data: featuredMusic, isLoading: musicLoading } = useQuery<MusicCollection[]>({
     queryKey: ["/api/music/featured"],
   });
@@ -26,9 +24,9 @@ export default function FeaturedContent() {
       <section className="py-16 bg-card/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-medium text-foreground mb-4">{t('featuredTitle')}</h3>
+            <h3 className="text-3xl font-medium text-foreground mb-4">Today's Peaceful Picks</h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t('featuredSubtitle')}
+              Handpicked content to guide your journey toward serenity and mindfulness.
             </p>
           </div>
           
@@ -77,7 +75,7 @@ export default function FeaturedContent() {
                 <div className="flex items-center justify-between mb-3">
                   <Badge className="bg-primary/10 text-primary border-none">
                     <Music className="w-4 h-4 mr-1" />
-                    {t('featuredMusic')}
+                    Featured Music
                   </Badge>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
                 </div>
@@ -88,7 +86,7 @@ export default function FeaturedContent() {
                   onClick={() => window.open(music.soundcloudUrl, '_blank')}
                   data-testid="listen-now-button"
                 >
-                  {t('listenNow')}
+                  Listen Now
                 </Button>
               </CardContent>
             </Card>
@@ -106,7 +104,7 @@ export default function FeaturedContent() {
                 <div className="flex items-center justify-between mb-3">
                   <Badge variant="secondary" className="bg-accent/70 text-accent-foreground border-none">
                     <Brain className="w-4 h-4 mr-1" />
-                    {t('featuredPractice')}
+                    Featured Practice
                   </Badge>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
                 </div>
@@ -118,7 +116,7 @@ export default function FeaturedContent() {
                   onClick={() => window.open(meditation.resourceUrl, '_blank')}
                   data-testid="start-practice-button"
                 >
-                  {t('startPractice')}
+                  Start Practice
                 </Button>
               </CardContent>
             </Card>
@@ -136,7 +134,7 @@ export default function FeaturedContent() {
                 <div className="flex items-center justify-between mb-3">
                   <Badge variant="outline" className="bg-secondary/70 text-secondary-foreground border-none">
                     <Heart className="w-4 h-4 mr-1" />
-                    {t('featuredAction')}
+                    Featured Action
                   </Badge>
                   <ExternalLink className="w-4 h-4 text-muted-foreground" />
                 </div>
@@ -148,7 +146,7 @@ export default function FeaturedContent() {
                   onClick={() => window.open(action.actionUrl, '_blank')}
                   data-testid="get-involved-button"
                 >
-                  {t('getInvolved')}
+                  Get Involved
                 </Button>
               </CardContent>
             </Card>
