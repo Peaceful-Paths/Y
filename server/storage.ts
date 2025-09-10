@@ -139,36 +139,36 @@ export class MemStorage implements IStorage {
     // Sample peaceful actions
     const actionData = [
       {
-        title: "Community Garden Project",
-        description: "Help create a peaceful green space where neighbors can grow food together and connect with nature.",
+        title: "UNICEF Children's Environmental Initiative",
+        description: "Support UNICEF's mission to protect children and create sustainable communities for future generations.",
         category: "environmental",
-        location: "Central Park",
-        frequency: "weekly",
-        participantCount: 24,
+        location: "Global",
+        frequency: "ongoing",
+        participantCount: 1200000,
         imageUrl: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b",
-        actionUrl: "https://example.com/community-garden",
+        actionUrl: "https://www.unicef.org/environment-and-climate-change",
         featured: 1
       },
       {
-        title: "Free Meditation Circle",
-        description: "Join our weekly outdoor meditation sessions designed to bring peace and mindfulness to busy city life.",
+        title: "UNICEF Mental Health Support",
+        description: "Help UNICEF provide mental health and psychosocial support to children and families in crisis.",
         category: "wellness",
-        location: "Riverside Park",
-        frequency: "weekly",
-        participantCount: 45,
+        location: "Global",
+        frequency: "ongoing",
+        participantCount: 890000,
         imageUrl: "https://images.unsplash.com/photo-1545389336-cf090694435e",
-        actionUrl: "https://example.com/meditation-circle",
+        actionUrl: "https://www.unicef.org/mental-health",
         featured: 0
       },
       {
-        title: "Mindful Beach Cleanup",
-        description: "Combine environmental action with mindfulness practice while restoring the natural beauty of our coastline.",
-        category: "environmental",
-        location: "Ocean Beach",
-        frequency: "monthly",
-        participantCount: 38,
+        title: "UNICEF Education for Peace",
+        description: "Support UNICEF's education programs that promote peace, tolerance, and understanding among children worldwide.",
+        category: "education",
+        location: "Global",
+        frequency: "ongoing",
+        participantCount: 2100000,
         imageUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64",
-        actionUrl: "https://example.com/beach-cleanup",
+        actionUrl: "https://www.unicef.org/education",
         featured: 0
       }
     ];
